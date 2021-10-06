@@ -1,0 +1,4 @@
+.dataTable-pagination-list {
+    display: flex !important;
+    flex-wrap: wrap !important;
+}

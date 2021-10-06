@@ -1,0 +1,133 @@
+.announces-card {
+    width: 290px;
+    height: 450px;
+}
+
+.td-photo {
+    height: 200px;
+    padding: 0.5rem;
+}
+
+.td-info {
+    height: 220px;
+    overflow: hidden;
+}
+
+.td-price {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: var(--bs-orange) !important;
+    height: 30px;
+    color: white;
+}
+
+.td-price > div {
+    font-family: "Impact", sans-serif !important;
+    font-weight: bold;
+    font-size: 1.5rem;
+    text-align: right;
+    width: 100%;
+}
+
+.dataTable-top {
+    background-color: #f8f9fa !important;
+    border: 1px solid #eaeaea;
+    border-radius: 5px;
+}
+
+.dataTable-search {
+    padding: 1rem 0;
+    margin: 0 1rem;
+    width: 100%;
+
+}
+
+.dataTable-input {
+    width: 100%;
+    margin: 0 1rem;
+}
+
+.dataTable-dropdown {
+    display: flex;
+    align-items: center;
+}
+
+.dataTable-sorter {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center;
+}
+
+th {
+    border-bottom: none !important;
+    margin: 0.5rem;
+    color: white;
+    border-radius: 5px;
+}
+
+.category-th {
+    background-color: var(--bs-orange) !important;
+}
+
+.titre-th {
+    background-color: var(--bs-orange) !important;
+}
+
+.prix-th {
+    background-color: var(--bs-orange) !important;
+}
+
+.description {
+    font-size: 0.8rem;
+}
+
+/**************************
+    ANNOUNCE
+**************************/
+
+#img-principal > img {
+    height: 500px;
+    margin: 0 0.2rem;
+    background-color: var(--bs-gray);
+}
+#tiles {
+    display: flex;
+}
+#photo1>img, #photo2>img, #photo3>img, #photo4>img, #photo5>img,
+#photo1-id>img, #photo2-id>img, #photo3-id>img, #photo4-id>img, #photo5-id>img
+{
+    height: 150px;
+    margin: 0.2rem 0.2rem 0.2rem 0;
+    background-color: var(--bs-gray);
+    cursor: pointer;
+    transition: all 0.3s;
+    opacity: 0.5;
+}
+
+#photo1>img:hover, #photo2>img:hover, #photo3>img:hover, #photo4>img:hover, #photo5>img:hover,
+#photo1-id>img:hover, #photo2-id>img:hover, #photo3-id>img:hover, #photo4-id>img:hover, #photo5-id>img:hover{
+    opacity: 1;
+}
+
+
+/* Set the size of the div element that contains the map */
+#map {
+    height: 400px;
+    /* The height is 400 pixels */
+    width: 100%;
+    /* The width is the width of the web page */
+}
+
+.street-map {
+    position: relative;
+    margin-top: 2rem;
+
+}
+
+.info-city-map {
+    position: absolute;
+    top: 0;
+    right: 0;
+    text-align: right;
+}

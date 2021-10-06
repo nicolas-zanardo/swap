@@ -1,0 +1,14 @@
+/**
+    Modal Auth
+ */
+.btn-link {
+    background-color: rgba(255, 255, 255, 0);
+    border: none;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+.title-auth {
+    font-family: "Impact",sans-serif !important;
+}
+

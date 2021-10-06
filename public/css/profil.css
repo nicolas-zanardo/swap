@@ -1,0 +1,14 @@
+.bubble-card {
+    min-width: 250px;
+    box-shadow: 1px 1px 15px 1px rgba(16, 16, 16, 0.42);
+    transition-duration: 0.3s;
+    transition-property: transform;
+}
+
+.bubble-card:hover {
+    transform: scale(1.1);
+}
+
+.info-profil {
+    background-color: whitesmoke !important;
+}

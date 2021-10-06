@@ -1,0 +1,49 @@
+.announces.active {
+    background-color: #363636 !important;
+    color: whitesmoke !important;
+}
+
+.announces {
+    color: #1a1e21 !important;
+}
+
+.tab-pane {
+    padding: 2rem;
+    border-radius: 5px;
+    background-color: whitesmoke !important;
+}
+
+.photo-display-principal {
+    margin: 0.3rem 0.1rem ;
+    height: 150px;
+    width: 100%;
+}
+
+.photo-display {
+    margin: 0.3rem 0.1rem ;
+    height: 130px;
+    width: 100%;
+}
+
+.input-info {
+    border: 0;
+}
+
+.btn-delete-img {
+    background-color: rgba(125, 125, 125, 0.33);
+    color: white;
+    text-align: center;
+    width: 100%;
+    outline: none;
+    border: none;
+}
+
+.cardtab {
+    width: 300px;
+    margin: 1rem;
+}
+
+.img-owncategory {
+    height: 200px;
+    max-width: 200px;
+}

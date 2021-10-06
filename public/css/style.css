@@ -1,0 +1,91 @@
+/**
+    HTML
+ */
+nav {
+    min-height: 7vh;
+}
+
+footer {
+    background-color: #363636;
+    color: white;
+    height: 10vh;
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/**
+    GENERIC
+ */
+.page {
+    min-height: 100vh;
+}
+
+.bg-modal {
+    background-color: #363636;
+    color: white;
+}
+
+.bg-close-modal {
+    background-color: white;
+
+}
+
+.w-45 {
+    width: 45px;
+}
+
+.info {
+    font-size: 0.8rem;
+    min-height: 1.6rem;
+    margin: 0.2rem;
+}
+
+/**
+  Bootstrap
+ */
+.btn-primary {
+    background-color: darkorange;
+    border: 1px solid darkorange;
+}
+
+.btn-primary:hover {
+    background-color: coral;
+    border: 1px solid coral;
+}
+
+.btn-primary:focus {
+    background-color: coral;
+    border: 1px solid coral;
+    box-shadow: 0 0 0 0.25rem rgba(255, 140, 0, 0.45);
+}
+
+/**
+    NavBar PUBLIC
+ */
+.bg-nav-public {
+    background-color: darkorange;
+    box-shadow: 0 0 3px 3px rgba(0, 0, 0, 0.4);
+}
+
+.btn-login {
+    background-color: rgba(255, 255, 255, 0);
+    color: white;
+    border: none;
+}
+
+.btn-login:hover {
+    background-color: rgba(255, 255, 255, 0);
+    color: white;
+    border: none;
+}
+
+.message-flash {
+    padding: 1rem 0;
+}
+
+.article-content {
+    white-space: pre-wrap;
+}
