@@ -15,8 +15,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $questionID = "idQuestion" . $key;
         $responseKey = "response" . $key;
         if (isset($_POST[$questionID]) && isset($_POST[$responseKey])) {
-            $_POST[$questionID] = filter_var($_POST[$questionID], FILTER_SANITIZE_STRING);
-            $_POST[$responseKey] = filter_var($_POST[$responseKey], FILTER_SANITIZE_STRING);
+            $_POST[$questionID] = filter_var($_POST[$questionID], FILTER_FLAG_ALLOW_FRACTION);
+            $_POST[$responseKey] = filter_var($_POST[$responseKey], FILTER_FLAG_ALLOW_FRACTION);
 
             if (empty($_POST[$questionID]) || empty($_POST[$responseKey])) {
                 $errors++;

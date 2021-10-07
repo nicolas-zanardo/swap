@@ -1,6 +1,6 @@
 .idea
 env/Variable.php
 env/VariableAPI.php
-public/files/swap-master.zip
+public/files/master.zip
 public/images/annonces/**/*
 logs/*

@@ -9,7 +9,7 @@ require_once __DIR__ . "/component/modal-auth.php";
             <div class="text-muted">IFOCOP - TP &copy; SWAP 2021</div>
             <div class="text-dark d-flex">
                 <a href="https://github.com/nicolas-zanardo/swap" target="'_blank"  class="text-dark align-items-center d-flex"><i class="fab fa-github fa-2x me-1"></i> check my git repository</a>
-                <a href="public/files/swap-master.zip"  class="btn btn-secondary mx-3">Télécharger le code .zip</a>
+                <a href="public/files/master.zip"  class="btn btn-secondary mx-3">Télécharger le code .zip</a>
             </div>
         </div>
     </div>
