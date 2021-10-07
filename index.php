@@ -125,7 +125,7 @@ require_once __DIR__ . "/include/component/navbar-public.php";
                 <h1 id="title"><?= $announceGET['titre'] ?? '' ?></h1>
                 <div id="edit-btn">
                     <?php if (isset($_GET['announce'], $_SESSION['user']['id_membre']) && ($announceGET['id_membre'] === $_SESSION['user']['id_membre'])): ?>
-                        <a href="annonces.php?action=edit&id=<?=$announce['id_annonce']?>"
+                        <a href="annonces.php?action=edit&id=<?=$announceGET['id_annonce']?>"
                            class="btn btn-warning d-flex align-items-center justify-content-center p-2">
                             <i class="fas fa-edit fa-2x text-white"></i>
                         </a>
