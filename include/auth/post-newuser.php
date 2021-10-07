@@ -71,8 +71,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $errors++;
         }
     }
-
-    $returnResponseSubmit = [];
+    $responseSubmit = 'false';
     if ($errors === 0) {
         $users->createOne([
             'pseudo' => $_POST['signup-pseudo'],
@@ -87,14 +86,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             !mkdir($concurrentDirectory = __DIR__ . '/../../public/images/annonces/' . $newUser['id_membre']) &&
             !is_dir($concurrentDirectory))
         {
+            $responseSubmit = 'false';
             throw new \RuntimeException(sprintf('Directory "%s" was not created', $concurrentDirectory));
         }
-
-        $returnResponseSubmit['responseSubmit'] = true;
+        $responseSubmit = 'true';
     } else {
-        $returnResponseSubmit['responseSubmit'] = false;
+        $responseSubmit = 'false';
     }
 
-    echo json_encode($returnResponseSubmit);
+    echo $responseSubmit;
 
 }

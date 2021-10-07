@@ -1,6 +1,15 @@
 # SWAP
 ___
 
+view demo https://swap.nicolas-zanardo.com/
+
+Pour se connecter au compte admin sur le web
+login : niko32@gmail.fr
+password : Aa123456789*
+
+Tout les utilisateurs on le même mot de passe mais sont initialisé a un ROLE_USER
+
+
 Avant de lancer l'application il est important de creeer le vichier de variable PDO dans le dossier env
 
 ```php

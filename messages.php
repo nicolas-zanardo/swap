@@ -42,8 +42,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
  *  Init Variable
  */
 $title = "messages";
-$eltCSS = ["datatable.css", "messages.css"];
-$eltJS = ["script.js", "messages.js", 'datatable.js'];
+$eltCSS = ["datatable.css"];
+$eltJS = ["script.js", 'datatable.js'];
 
 require_once __DIR__ . "/include/header.php";
 require_once __DIR__ . "/include/component/navbar-public.php";

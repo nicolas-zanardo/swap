@@ -8,7 +8,6 @@
 const REQUIRED = "Veuillez renseigner ce champ";
 const formSignup = document.getElementById("form-signup");
 const formSignin = document.getElementById("form-signin");
-let xhr;
 // REGEX
 const regexEmail = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9-]{2,}[.][a-zA-Z]{2,4}$/;
 const regexPhone = /^((\+)?[0-9]{10,20})$/;
@@ -134,9 +133,12 @@ document.getElementById("btn-signup").addEventListener('click', function () {
 
         // response behavior depending on the server
         function responseSubmit() {
+            
             if (xhr.readyState === XMLHttpRequest.DONE) {
                 if (xhr.readyState === 4 && xhr.status === 200) {
-                    if (JSON.parse(xhr.responseText).responseSubmit === true) {
+                
+                    console.log(xhr.responseText)
+                    if (xhr.responseText === 'true') {
                         // Message
                         let info = document.getElementById('info-submit-success');
                         info.classList.remove("d-none");
@@ -250,7 +252,7 @@ function ajaxPseudoPOST(responsePseudo) {
     const formData = new FormData(formSignup);
     formData.append('checkPseudo', pseudoSignup.value);
     xhr.onreadystatechange = responsePseudo;
-    xhr.open('POST', 'include/auth/post-isused.php', true);
+    xhr.open('POST', 'include/auth/post-isused.php', 'true');
     xhr.send(formData);
 }
 
@@ -258,7 +260,7 @@ function ajaxPseudoPOST(responsePseudo) {
 function responsePseudo() {
     if (xhr.readyState === XMLHttpRequest.DONE) {
         if (xhr.readyState === 4 && xhr.status === 200) {
-            if (JSON.parse(xhr.responseText).responsePseudo === true) {
+            if (xhr.responseText === 'true') {
                 errorsSignup['pseudo-used'] = "Le pseudo existe déjà";
                 document.querySelector(".signup-pseudo-used").innerHTML = errorsSignup['pseudo-used'];
             } else {
@@ -279,14 +281,14 @@ function ajaxEmailPOST(responseEmail) {
     const formData = new FormData(formSignup);
     formData.append('checkEmail', emailSignup.value);
     xhr.onreadystatechange = responseEmail;
-    xhr.open('POST', 'include/auth/post-isused.php', true);
+    xhr.open('POST', 'include/auth/post-isused.php', 'true');
     xhr.send(formData);
 }
 
 function responseEmailAuth() {
     if (xhr.readyState === XMLHttpRequest.DONE) {
         if (xhr.readyState === 4 && xhr.status === 200) {
-            if (JSON.parse(xhr.responseText).responseEmail === true) {
+            if (xhr.responseText === 'true') {
                 errorsSignup['email-used'] = "L'email existe déjà";
                 document.querySelector(".signup-email-used").innerHTML = errorsSignup['email-used'];
 

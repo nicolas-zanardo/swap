@@ -4,5 +4,10 @@ $announceDB = new AnnounceDB();
 
 if (isset($_POST['announceID'])) {
     $announce = $announceDB->editArticle($_POST['announceID']);
-    echo json_encode( $announce);
+
+    if($announce) {
+        echo json_encode($announce);
+    }
+
+    
 }

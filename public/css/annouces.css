@@ -47,3 +47,13 @@
     height: 200px;
     max-width: 200px;
 }
+
+
+@media (max-width: 450px) { 
+    .tab-pane {
+        padding: 0.5rem;  
+    } 
+    .cardtab {
+        margin: 0.2rem;
+    }
+}

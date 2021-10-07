@@ -41,6 +41,7 @@ class AnnounceDB extends Database
         INNER JOIN membre on membre.id_membre = annonce.id_membre
         WHERE id_annonce=:id
         ", array('id' => $id));
+
         return $announce->fetch();
     }
 
@@ -85,7 +86,7 @@ class AnnounceDB extends Database
     public function createOne($announce, array $photos)
     {
 
-        $this->sql("INSERT INTO annonce VALUES (null,:titre, :description_courte, :description_longue, :prix, :photo, :adresse, :pays, :ville, :cp,:latlng_lat, :latlng_log, NOW(),:id_categorie, :id_photo, :id_membre)", array(
+        $this->sql("INSERT INTO annonce VALUES (null,:titre, :description_courte, :description_longue, :prix, :photo, :adresse, :pays, :ville, :cp, :latlng_log, :latlng_lat, NOW(),:id_categorie, :id_photo, :id_membre)", array(
             'titre' => $announce['titre'],
             'description_courte' => $announce["description_courte"],
             'description_longue' => $announce['description_longue'],
@@ -106,7 +107,7 @@ class AnnounceDB extends Database
         return $this->pdo()->lastInsertId('id_annonce');
     }
 
-    public function updateAnnounce(array $announce, $idAnnounce)
+    public function updateAnnounce(array $announce)
     {
         $this->sql("UPDATE annonce SET 
                    titre=:titre, 
@@ -118,10 +119,10 @@ class AnnounceDB extends Database
                    pays=:pays, 
                    ville=:ville, 
                    cp=:cp, 
-                   id_categorie=:id_categorie,
+                   latlng_log=:latlng_log,
                    latlng_lat=:latlng_lat,
-                   latlng_log=:latlng_log
-                   WHERE id_annonce=:id", array(
+                   id_categorie=:id_categorie
+                   WHERE id_annonce=:id_annonce", array(
             'titre' => $announce['titre'],
             'description_courte' => $announce["description_courte"],
             'description_longue' => $announce['description_longue'],
@@ -134,7 +135,7 @@ class AnnounceDB extends Database
             'latlng_log' => $announce['latlng_log'],
             'latlng_lat' => $announce['latlng_lat'],
             'id_categorie' => $announce['id_categorie'],
-            'id' => $idAnnounce
+            'id_annonce' => $announce['id_annonce']
         ));
     }
 

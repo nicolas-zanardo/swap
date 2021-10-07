@@ -93,7 +93,7 @@ if (!empty($_POST)) {
                                         <input type="hidden" name="announceID" value="<?= $announce['id_annonce'] ?>" >
                                         <button class="btn btn-danger w-100 my-1"><i class="fas fa-trash"></i></button>
                                     </form>
-                                    <a class="btn btn-warning w-100 my-1" href="/?announce=<?= $announce['id_annonce'] ?>"><i class="fas fa-edit text-white"></i></a>
+                                    <a class="btn btn-secondary w-100 my-1" href="/?announce=<?= $announce['id_annonce'] ?>"><i class="fas fa-eye text-white"></i></a>
                                 </td>
                             </tr>
                         <?php endforeach; ?>

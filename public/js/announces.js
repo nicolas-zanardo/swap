@@ -214,8 +214,8 @@ document.addEventListener('DOMContentLoaded', () => {
         document.querySelector('.info-pays').textContent = e.suggestion.country || 'aucun pays';
         document.querySelector('#form-zip').value = e.suggestion.postcode || 'aucun code postal';
         document.querySelector('.info-zip').textContent = e.suggestion.postcode || 'aucun code postal';
-        document.querySelector('#form-latlngLat').value = e.suggestion.latlng.lat;
-        document.querySelector('#form-latlngLog').value = e.suggestion.latlng.lng;
+        document.querySelector('#latlngLat').value = e.suggestion.latlng.lat;
+        document.querySelector('#latlngLog').value = e.suggestion.latlng.lng;
     });
 })();
 

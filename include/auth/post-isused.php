@@ -6,19 +6,19 @@ $users = new UserDB();
 if(isset($_POST['checkPseudo'])) {
     $pseudo = $users->fetchOne("pseudo", $_POST['checkPseudo']);
     if($pseudo){
-        $returnResponsePseudo['responsePseudo'] = true;
+        $returnResponsePseudo = 'true';
     } else {
-        $returnResponsePseudo['responsePseudo'] = false;
+        $returnResponsePseudo = 'false';
     }
-    echo json_encode($returnResponsePseudo);
+    echo $returnResponsePseudo;
 }
 
 if(isset($_POST['checkEmail'])) {
     $email = $users->fetchOne("email", $_POST['checkEmail']);
     if($email){
-        $returnResponseEmail['responseEmail'] = true;
+        $returnResponseEmail = 'true';
     } else {
-        $returnResponseEmail['responseEmail'] = false;
+        $returnResponseEmail = 'false';
     }
-    echo json_encode($returnResponseEmail);
+    echo $returnResponseEmail;
 }

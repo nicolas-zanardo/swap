@@ -3,7 +3,7 @@
 require_once __DIR__ . "/component/modal-auth.php";
 
 ?>
-<footer class="py-4 bg-light mt-auto">
+<footer class="py-4 mt-5 bg-light mt-auto">
     <div class="container-fluid px-4">
         <div class="d-flex align-items-center justify-content-between small flex-wrap-reverse">
             <div class="text-muted">IFOCOP - TP &copy; SWAP 2021</div>

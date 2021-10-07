@@ -111,8 +111,13 @@ require_once __DIR__ . "/include/component/navbar-public.php";
 
 
     <div id="announce" class="m-3 <?= isset($_GET['announce']) ? "" : "d-none" ?>">
-        <button id="close-announce" type="button" class="btn btn-secondary mb-3"><i
-                    class="fas fa-arrow-circle-left me-1"></i> Retour aux annonces
+        <button id="close-announce"  action="action"
+                onclick="window.history.go(-1); return false;"
+                type="submit"
+                value="Cancel" 
+                class="btn btn-secondary mb-3">
+                <i class="fas fa-arrow-circle-left me-1"></i> 
+                Retour aux annonces
         </button>
 
         <div class="container-fluid m-5">
@@ -200,14 +205,16 @@ require_once __DIR__ . "/include/component/navbar-public.php";
                                         }  elseif ($noteDB->countNoteByUser($announceGET['id_membre']) === 0 ) {
                                             $noteMoyenne = "0";
                                         } else {
-                                            $noteMoyenne = round(($noteDB->sumNoteByIDMembre($announceGET['id_membre']) / $noteDB->countNoteByUser($announceGET['id_membre']) * 10 * 2) , 2);
+                                            $noteMoyenne = round( ( $noteDB->sumNoteByIDMembre($announceGET['id_membre']) / $noteDB->countNoteByUser($announceGET['id_membre']) ) * 10 * 2);
                                         }
                                         ?>
                                          style="width: <?= $noteMoyenne  ?>%"
                                          aria-valuenow="0" aria-valuemin="0" aria-valuemax="5">
                                     </div>
                                 </div>
+                                <?php if( (!empty($_SESSION['user']['id_membre']) &&  ($_SESSION['user']['id_membre'] !=  $announceGET['id_membre'])) && !empty($_SESSION['user']['id_membre'])): ?>
                                 <button class="btn btn-primary my-2" type="button" data-bs-toggle="modal" data-bs-target="#modal">Votez</button>
+                                <?php endif; ?>
                                 <!-- Modal -->
                                 <div class="modal fade" id="modal" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
                                     <div class="modal-dialog modal-dialog-centered">
